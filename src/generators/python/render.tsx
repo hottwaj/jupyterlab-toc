@@ -14,7 +14,11 @@ import { IHeading } from '../../utils/headings';
 function render(item: IHeading) {
   let fontSizeClass = 'toc-level-size-' + item.level;
 
-  return <span className={fontSizeClass}> {item.text} </span>;
+  return (
+    <div className={'toc-entry-holder toc-entry-level-' + item.level}>
+      <span className={fontSizeClass}> {item.text} </span>
+    </div>
+  );
 }
 
 /**
